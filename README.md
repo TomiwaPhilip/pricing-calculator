@@ -273,7 +273,7 @@ Deployment follows the local verification gate.
 5. Run the production smoke journey against the deployed URL before publishing
    it as the assignment submission.
 
-**Live URL:** Pending Vercel deployment.
+**Live URL:** [Folio](https://folio-docs-inky.vercel.app/login)
 
 ## Planning documents
 
