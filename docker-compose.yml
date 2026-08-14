@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: pricing_calculator
+      POSTGRES_USER: pricing
+      POSTGRES_PASSWORD: pricing
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pricing -d pricing_calculator"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - pricing_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  pricing_postgres_data:
